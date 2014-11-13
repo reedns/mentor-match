@@ -1,13 +1,23 @@
 class UsersController < ApplicationController
   before_action :set_user, only:
-  [:show, :profile_starter, :edit, :update, :destroy, :dashboard, :history]
+  [:show, :profile_starter, :edit, :update, :destroy, :dashboard, :star, :unstar, :favorites]
 
   def dashboard
     @pending_friendships = Friendship.where(
       'friend_id = ? AND state = ?', current_user.id, 'pending')
   end
 
-  def history
+  def star
+    @user.liked_by current_user
+    redirect_to @user, notice: '#{@user.name} was added to your favorites!'
+  end
+
+  def unstar
+    @user.unliked_by current_user
+    redirect_to @user, notice: '#{@user.name} was removed from your favorites!'
+  end
+
+  def favorites
     @users = policy_scope(User)
   end
 

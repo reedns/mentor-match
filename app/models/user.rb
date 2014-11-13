@@ -27,6 +27,9 @@ class User < ActiveRecord::Base
                             :technologies],
                   using: { tsearch: { dictionary: 'english', prefix: true } }
 
+  acts_as_votable
+  acts_as_voter
+
   def self.search(query)
     query.present? ? super_search(query) : order('users.created_at DESC').all
   end

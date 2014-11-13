@@ -14,3 +14,5 @@
   /   %p= link_to "My Toolbox", toolbox_path
   %section
     %p= link_to "About", intro_path
+  %section
+    %p= link_to "My Favorites", favorites_path(current_user.id)

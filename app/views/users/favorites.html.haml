@@ -1,0 +1,12 @@
+.browse-users
+  %header
+    .logo
+    = render "quickNav"
+  .mainWrapper
+    = render 'main_nav'
+    - if current_user.inverse_friendships
+      = render 'activity_feed'
+    .users
+      - @users.each do |user|
+        - if current_user.voted_for? user
+          = render user

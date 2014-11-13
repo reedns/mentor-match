@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       put 'unstar', to: 'users#unstar'
     end
   end
+
   # The priority is based upon order of creation: first created -> highest
   # priority.
   # See how all your routes lay out with "rake routes".
@@ -19,11 +20,7 @@ Rails.application.routes.draw do
   get 'static_pages/intro' => 'static_pages#intro', as: :intro
   get 'static_pages/toolbox' => 'static_pages#toolbox', as: :toolbox
   get 'users/:id/dashboard' => 'users#dashboard', as: :dashboard
-  get 'users/:id/history' => 'users#history', as: :history
-
-  # You can have the root of your site routed with "root"
-
+  get 'users/:id/favorites' => 'users#favorites', as: :favorites
   get '/create_account' => 'user#new'
 
-  get '/create_account' => 'user#new'
 end
