@@ -3,7 +3,7 @@ require 'test_helper'
 feature 'As a mentor on the browse page' do
   before do
     sign_in_mentor
-    click_on 'Browse'
+    click_on 'Browse Mentees'
   end
 
   scenario 'I can browse only mentees' do
@@ -32,7 +32,7 @@ end
 feature 'As a mentee' do
   scenario 'I can get to my dashboard and view only mentors' do
     sign_in_mentee
-    click_on 'Browse'
+    click_on 'Browse Mentors'
 
     page.must_have_content users(:mentor_user).first_name
     page.must_have_content users(:mentor_user_2).first_name
@@ -45,7 +45,7 @@ feature 'As a mentor, I want to search for mentees' do
   before do
     visit root_path
     sign_in_mentor
-    click_on 'Browse'
+    click_on 'Browse Mentees'
   end
 
   scenario 'Mentor should find matching mentees through searching' do

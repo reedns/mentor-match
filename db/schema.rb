@@ -21,38 +21,38 @@ ActiveRecord::Schema.define(version: 20141113204526) do
     t.integer  "friend_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "state"
+    t.string   "state",      limit: 255
   end
 
   create_table "users", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "first_name",             limit: 255
+    t.string   "last_name",              limit: 255
     t.text     "background"
     t.text     "accomplishments"
     t.text     "professional_summary"
     t.text     "personal_statement"
-    t.string   "role"
+    t.string   "role",                   limit: 255
     t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",                  default: "",   null: false
-    t.string   "encrypted_password",     default: "",   null: false
-    t.string   "reset_password_token"
+    t.string   "email",                  limit: 255, default: "",   null: false
+    t.string   "encrypted_password",     limit: 255, default: "",   null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,    null: false
+    t.integer  "sign_in_count",                      default: 0,    null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "company"
-    t.string   "position"
-    t.string   "graduating_class"
-    t.boolean  "available",              default: true
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "provider",               limit: 255
+    t.string   "uid",                    limit: 255
+    t.string   "company",                limit: 255
+    t.string   "position",               limit: 255
+    t.string   "graduating_class",       limit: 255
+    t.boolean  "available",                          default: true
     t.text     "technologies"
-    t.string   "course"
+    t.string   "course",                 limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -60,11 +60,11 @@ ActiveRecord::Schema.define(version: 20141113204526) do
 
   create_table "votes", force: true do |t|
     t.integer  "votable_id"
-    t.string   "votable_type"
+    t.string   "votable_type", limit: 255
     t.integer  "voter_id"
-    t.string   "voter_type"
+    t.string   "voter_type",   limit: 255
     t.boolean  "vote_flag"
-    t.string   "vote_scope"
+    t.string   "vote_scope",   limit: 255
     t.integer  "vote_weight"
     t.datetime "created_at"
     t.datetime "updated_at"
