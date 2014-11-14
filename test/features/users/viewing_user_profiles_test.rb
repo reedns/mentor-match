@@ -89,6 +89,7 @@ feature 'User names are automatically capitalized' do
     fill_in 'Last Name', with: 'miller'
     fill_in 'Password', with: 'password'
     fill_in 'user_password_confirmation', with: 'password'
+    fill_in 'Course', with: 'Ruby on Rails'
     click_on 'Submit'
 
     first(:link, 'Save this Step for Later').click

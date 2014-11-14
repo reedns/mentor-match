@@ -40,6 +40,7 @@ feature 'A user must be able to sign in in a variety of ways' do
     fill_in 'Last Name', with: 'Robin'
     fill_in 'Password', with: 12_345_678
     fill_in 'user_password_confirmation', with: 12_345_678
+    fill_in 'Course', with: 'Ruby on Rails'
     click_on 'Submit'
 
     fill_in 'Technologies', with: 'Javascript, Ruby'
