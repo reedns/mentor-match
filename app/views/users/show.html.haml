@@ -93,7 +93,7 @@
     / Add or remove favorites link
     - if current_user.voted_for? @user
       = link_to "Remove from favorites", unstar_user_path(@user), method: :put, class: "addFav"
-    - else
+    - elsif @user != current_user
       = link_to "Add to favorites", star_user_path(@user), method: :put, class: "addFav"
 
     / Request/End mentorship links
