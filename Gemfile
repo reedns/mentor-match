@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.5'
+
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'autoprefixer-rails', '~> 3.1.2.20141016'
 gem 'binding_of_caller'
