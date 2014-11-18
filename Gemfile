@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.5'
+
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'autoprefixer-rails', '~> 3.1.2.20141016'
 gem 'binding_of_caller'
@@ -30,7 +32,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate', '~> 3.0.7'
 gem 'unicorn'
-gem 'sidekiq'
+gem 'sucker_punch'
 gem 'goldiloader'
 gem 'newrelic_rpm'
 

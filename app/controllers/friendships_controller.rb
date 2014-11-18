@@ -33,8 +33,8 @@ class FriendshipsController < ApplicationController
     mentee = @friendship.find_mentee
     @friendship.accept
     @friendship.save!
-    MentorshipMailer.acceptance_email_to_mentee(mentor, mentee).deliver_later
-    MentorshipMailer.acceptance_email_to_mentor(mentor, mentee).deliver_later
+    MentorshipMailer.acceptance_email_to_mentee(mentor, mentee).deliver_later!
+    MentorshipMailer.acceptance_email_to_mentor(mentor, mentee).deliver_later!
     flash[:notice] = 'Mentorship approved'
     redirect_to root_path
   end

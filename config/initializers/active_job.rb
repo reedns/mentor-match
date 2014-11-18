@@ -1,3 +1,2 @@
-Rails.application.configure do
-  config.active_job.queue_adapter = :sidekiq
-end
+ActiveJob::Base.queue_adapter = :sucker_punch
+
