@@ -13,7 +13,6 @@ feature 'user policy is enforced' do
   end
 
   scenario "user cannot edit other user's profile" do
-    click_on 'Browse'
     page.first(:link, 'View Details').click
     refute_css '#edit'
   end

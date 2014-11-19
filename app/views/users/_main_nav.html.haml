@@ -1,11 +1,11 @@
 .mainNav
   %section
-    %p= link_to "Home", dashboard_path(current_user.id)
-  %section
-    - if current_user.mentor?
-      %p= link_to "Browse Mentees", users_path
-    - else
-      %p= link_to "Browse Mentors", users_path
+    %p= link_to "Home", users_path
+  / %section
+  /   - if current_user.mentor?
+  /     %p= link_to "Browse Mentees", users_path
+  /   - else
+  /     %p= link_to "Browse Mentors", users_path
   %section
     - if current_user.mentor?
       %p= link_to "My Mentees", friendships_path

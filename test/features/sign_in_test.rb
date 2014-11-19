@@ -48,12 +48,12 @@ feature 'A user must be able to sign in in a variety of ways' do
     click_on 'Submit'
     first(:link, 'Home').click
 
-    page.current_path.must_include 'dashboard'
+    page.current_path.must_equal users_path
   end
 
   scenario 'signed in users are taken to their dashboard' do
     sign_in_mentee
     visit root_path
-    page.must_have_content 'Browse'
+    page.current_path.must_equal users_path
   end
 end

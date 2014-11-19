@@ -23,7 +23,7 @@ feature 'Requesting mentorships' do
     page.must_have_content users(:mentee_user).first_name
 
     first(:link, 'Accept').click
-    page.wont_have_content users(:mentee_user).first_name
+    page.wont_have_link 'Accept'
   end
 
   scenario 'a mentor declines a request from a mentee' do
@@ -35,7 +35,7 @@ feature 'Requesting mentorships' do
 
     sign_in_mentor
     first(:link, 'Decline').click
-    page.wont_have_content users(:mentee_user).first_name
+    page.wont_have_link 'Accept'
   end
 end
 
