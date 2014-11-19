@@ -102,7 +102,7 @@
 
     - if current_user.accepted_friends.include?(@user)
       = link_to "End Mentorship", friendship_path(@user.find_friendship(current_user)), method: :delete, data: { confirm: 'Are you sure?'}, class: 'addFav'
-    = link_to 'Home', dashboard_path, class: 'addFav'
+    = link_to 'Home', users_path, class: 'addFav'
 
 
 

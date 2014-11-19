@@ -3,7 +3,7 @@ class PassthroughController < ApplicationController
 
   def index
     if current_user.present?
-      path = dashboard_path(current_user.id)
+      path = users_path
     else
       path = splash_path
     end

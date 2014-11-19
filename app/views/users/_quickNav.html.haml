@@ -11,7 +11,7 @@
           = link_to "Sign Out", destroy_user_session_path, method: :delete, class: "signout"
       .verticalRule
       %li
-        = link_to "", dashboard_path(id: current_user.id), class: "fa fa-home", id: "home"
+        = link_to "", users_path, class: "fa fa-home", id: "home"
         %label{for: "home"} home
       .verticalRule
       / %li
