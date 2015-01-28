@@ -44,6 +44,9 @@ form#new_user{
     width: 80%;
     background: transparent;
   }
+  #error_explanation{
+    color: $delta;
+  }
   section{
     position: relative;
     width: 100%;
@@ -76,7 +79,7 @@ form#new_user{
       background: $alpha_light50;
     }
   }
-  label{
+  label, .field_with_errors{
     width: 35%;
     margin-right: 1em;
     display: inline-block;
