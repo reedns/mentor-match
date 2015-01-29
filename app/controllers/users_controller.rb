@@ -81,7 +81,7 @@ class UsersController < ApplicationController
       :first_name, :last_name, :background,
       :accomplishments, :professional_summary, :personal_statement, :role,
       :admin, :company, :position, :graduating_class, :course, :available,
-      :technologies)
+      :technologies, :hopes_for_mentorship, :hopes_for_future)
   end
 
   def pending_mentorship

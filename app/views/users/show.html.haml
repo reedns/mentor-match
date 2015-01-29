@@ -57,6 +57,18 @@
       %label{for: "background"} Bio:
       %p#background= @user.background
 
+
+      /=============================================
+      / More Mentee SPECIFIC
+      /=============================================
+    - if @user.mentee?
+      %section
+        %label{for: "hopes_for_mentorship"} Hopes for mentorship:
+        %p= @user.hopes_for_mentorship
+      %section
+        %label{for: "hopes_for_future"} Hopes for my professional future:
+        %p= @user.hopes_for_future
+
     /
       \============================================
       ADMIN-SPECIFIC SECTION

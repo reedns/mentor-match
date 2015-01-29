@@ -21,6 +21,8 @@ feature 'As a mentor I can view my own profile and other user profiles' do
     page.must_have_content 'Bio'
     page.must_have_content 'Technologies'
     page.must_have_content 'Course'
+    page.must_have_content 'Hopes for mentorship'
+    page.must_have_content 'Hopes for my professional future'
 
     page.wont_have_content 'Company'
     page.wont_have_content 'Position'
