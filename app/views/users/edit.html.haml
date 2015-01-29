@@ -17,7 +17,8 @@
           %li.progDot.active
           %li.progDot
           %li.progDot
-          - if current_user.role == "mentor"
+          %li.progDot
+          - if current_user.role == "mentee"
             %li.progDot
     %section#s2
       %h2
@@ -32,7 +33,8 @@
           %li.progDot
           %li.progDot.active
           %li.progDot
-          - if current_user.role =="mentor"
+          %li.progDot
+          - if current_user.role =="mentee"
             %li.progDot
     - if current_user.role == "mentee"
       %section#s3
@@ -41,10 +43,40 @@
         .fieldWrap
           = f.label :technologies
           = f.text_area :technologies, placeholder: 'Example: Python, JavaScript, and Node.js'
+        %span.next.fa.fa-angle-double-right#next_3
+        %nav.progBar
+          %ul
+            %li.progDot
+            %li.progDot
+            %li.progDot.active
+            %li.progDot
+            %li.progDot
+      %section#s4
+        %h2
+          What do you want from your mentorship?
+        .fieldWrap
+          = f.label :hopes_for_mentorship
+          = f.text_area :hopes_for_mentorship, placeholder: 'Example: I want to learn more about scaling applications.'
+        %span.next.fa.fa-angle-double-right#next_4
+        %nav.progBar
+          %ul
+            %li.progDot
+            %li.progDot
+            %li.progDot
+            %li.progDot.active
+            %li.progDot
+      %section#s5
+        %h2
+          What do you want for your professional future?
+        .fieldWrap
+          = f.label :hopes_for_future, 'Hopes for my professional future'
+          = f.text_area :hopes_for_future, placeholder: 'Example: I want to move to Silicon Valley and find work there.'
           %button.submit
             = f.submit 'Submit', class: "submit"
         %nav.progBar
           %ul
+            %li.progDot
+            %li.progDot
             %li.progDot
             %li.progDot
             %li.progDot.active
