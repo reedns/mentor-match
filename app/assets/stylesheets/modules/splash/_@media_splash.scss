@@ -112,7 +112,7 @@
         padding: 15vh 0;
         height: 65vh;
         margin:  0;
-        background-image: url(image-path("dexter-sarah3.jpg"));
+        background-image: url(image-path("desk.jpg"));
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top;
@@ -146,6 +146,7 @@
           width: 40vw;
           &:hover{
             border-color: transparent;
+            border-color: $delta;
           }
           a{
             color: $delta;
