@@ -5,20 +5,37 @@
   = form_for(@user) do |f|
     %section#s1
       %h2
-        We'll use a few quick questions to build your profile.
-        Tell us a little about yourself.<br> Anything you want.
+        Is your name correct?
       .fieldWrap
-        = f.label :background, 'Bio'
-        = f.text_area :background, placeholder: "Well, on Saturdays I like to juggle chainsaws dressed like a sailor..."
+        = f.label :first_name
+        = f.text_field :first_name
+        = f.label :last_name
+        = f.text_field :last_name
         %span.next.fa.fa-angle-double-right#next_1
       %nav.progBar
         %ul
           %li.progDot.active
           %li.progDot
+          %li.progDot
+          - if current_user.role == "mentor"
+            %li.progDot
+    %section#s2
+      %h2
+        We'll use a few quick questions to build your profile.
+        Tell us a little about yourself.<br> Anything you want.
+      .fieldWrap
+        = f.label :background, 'Bio'
+        = f.text_area :background, placeholder: "Well, on Saturdays I like to juggle chainsaws dressed like a sailor..."
+        %span.next.fa.fa-angle-double-right#next_2
+      %nav.progBar
+        %ul
+          %li.progDot
+          %li.progDot.active
+          %li.progDot
           - if current_user.role =="mentor"
             %li.progDot
     - if current_user.role == "mentee"
-      %section#s2
+      %section#s3
         %h2
           What technologies are you familiar with?
         .fieldWrap
@@ -29,21 +46,23 @@
         %nav.progBar
           %ul
             %li.progDot
+            %li.progDot
             %li.progDot.active
     - if current_user.role == "mentor"
-      %section#s6
+      %section#s3
         %h2
           What is your role right now?
         .fieldWrap
           = f.label :position
           = f.text_area :position, placeholder: "Example: Senior Engineer"
-          %span.next.fa.fa-angle-double-right#next_6
+          %span.next.fa.fa-angle-double-right#next_3
         %nav.progBar
           %ul
             %li.progDot
+            %li.progDot
             %li.progDot.active
             %li.progDot
-      %section#s7
+      %section#s4
         %h2
           Where do you work? <br> Just the company name is fine.
         .fieldWrap
@@ -53,6 +72,7 @@
             = f.submit 'Submit', class: "submit"
         %nav.progBar
           %ul
+            %li.progDot
             %li.progDot
             %li.progDot
             %li.progDot.active
