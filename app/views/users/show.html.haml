@@ -7,11 +7,16 @@
   %header
   %article.userProfile
     %figure.profilePic
-    = image_tag @user.gravatar_url(:d => "http%3A%2F%2Fi.imgur.com%2FUFa4kwT.png")
+    = image_tag @user.image_url ? @user.image_url : @user.gravatar_url(:d => "http%3A%2F%2Fi.imgur.com%2FUFa4kwT.png")
     - if policy(@user).update?
-      %a{href: "http://en.gravatar.com/"}
+      -# %a{href: "http://en.gravatar.com/"}
+      -#   %figcaption
+      -#     %small Don't see your picture? Get a Gravatar!
+      -#     %span.fa.fa-chevron-circle-right
+      -#
+      = link_to user_omniauth_authorize_path(:linkedin) do
         %figcaption
-          %small Don't see your picture? Get a Gravatar!
+          %small Don't see your picture? Use your LinkedIn profile picture!
           %span.fa.fa-chevron-circle-right
     %section
       %label{for: "Name"} Name:
@@ -115,7 +120,3 @@
     - if current_user.accepted_friends.include?(@user)
       = link_to "End Mentorship", friendship_path(@user.find_friendship(current_user)), method: :delete, data: { confirm: 'Are you sure?'}, class: 'addFav'
     = link_to 'Home', users_path, class: 'addFav'
-
-
-
-
