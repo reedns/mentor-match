@@ -24,7 +24,4 @@ class OmniauthCallbacksController < ApplicationController
       render "users/#{user.id}"
     end
   end
-
-
-
 end

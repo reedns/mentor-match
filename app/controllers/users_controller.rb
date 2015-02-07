@@ -68,6 +68,15 @@ class UsersController < ApplicationController
     redirect_to users_url, notice: 'User was successfully destroyed.'
   end
 
+  def update_image
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to user_path(@user), notice: 'Profile picture updated.'
+    else
+      render :show
+    end
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -81,7 +90,7 @@ class UsersController < ApplicationController
       :first_name, :last_name, :background,
       :accomplishments, :professional_summary, :personal_statement, :role,
       :admin, :company, :position, :graduating_class, :course, :available,
-      :technologies, :hopes_for_mentorship, :hopes_for_future)
+      :technologies, :hopes_for_mentorship, :hopes_for_future, :image_url)
   end
 
   def pending_mentorship

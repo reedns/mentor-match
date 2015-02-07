@@ -14,7 +14,7 @@
       -#     %small Don't see your picture? Get a Gravatar!
       -#     %span.fa.fa-chevron-circle-right
       -#
-      = link_to user_omniauth_authorize_path(:linkedin) do
+      = link_to update_image_path(@user), class:'linkedin', remote: true do
         %figcaption
           %small Don't see your picture? Use your LinkedIn profile picture!
           %span.fa.fa-chevron-circle-right
