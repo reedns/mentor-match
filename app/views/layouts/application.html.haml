@@ -7,8 +7,8 @@
     %script{src: 'https://platform.linkedin.com/in.js', type: 'text/javascript'}
       :cdata
         api_key: #{ENV['LINKEDIN_KEY']}
-        authorize: true
-    %script{type: 'IN/Login'}
+        onLoad: onLinkedInLoad
+        authorize: false
     = csrf_meta_tags
   %body
     = yield

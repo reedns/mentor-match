@@ -9,15 +9,11 @@
     %figure.profilePic
     = image_tag @user.image_url ? @user.image_url : @user.gravatar_url(:d => "http%3A%2F%2Fi.imgur.com%2FUFa4kwT.png")
     - if policy(@user).update?
-      -# %a{href: "http://en.gravatar.com/"}
+      -# = link_to update_image_path(@user), class:'linkedin', remote: true, method: :patch do
       -#   %figcaption
-      -#     %small Don't see your picture? Get a Gravatar!
-      -#     %span.fa.fa-chevron-circle-right
-      -#
-      = link_to update_image_path(@user), class:'linkedin', remote: true do
-        %figcaption
-          %small Don't see your picture? Use your LinkedIn profile picture!
-          %span.fa.fa-chevron-circle-right
+      -#     %small Don't see your picture? Use your LinkedIn profile picture!
+      %script{type: 'IN/Login'}
+
     %section
       %label{for: "Name"} Name:
       %p#Name #{@user.first_name} #{@user.last_name}

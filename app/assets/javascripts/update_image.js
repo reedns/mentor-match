@@ -1,28 +1,14 @@
-var getLinkedInPic = {
-  init: function()  {
-    $('#linkedin').on('click', this.onLinkedInLoad);
-  },
+function onLinkedInLoad() {
+  IN.Event.on(IN, "auth", onLinkedInAuth);
+}
 
-  onLinkedInLoad: function() {
-    IN.Event.on(IN, 'auth', this.onLinkedInAuth);
-  },
+function onLinkedInAuth() {
+  IN.API.Profile('me').fields(['pictureUrl']).result(function(result) {
+    updateImage(result.values[0]);
+  });
+}
 
-  onLinkedInAuth: function() {
-    var profileImg = IN.API.Profile('me').fields(['pictureURL']);
-    this.updateProfileImg(profileImg);
-  },
-
-  updateProfilePic: function(img) {
-    var user_id = $(this).data('id');
-
-    $.ajax({
-      method: 'patch',
-      url: 'users/' + user_id,
-      data: {'image_url': img, 'id': user_id}
-    });
-  }
-};
-
-$(document).ready(function() {
-  getLinkedInPic.init();
-});
+function updateImage(img) {
+  
+  console.log(user_id)
+}
