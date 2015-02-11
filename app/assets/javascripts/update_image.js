@@ -9,6 +9,5 @@ function onLinkedInAuth() {
 }
 
 function updateImage(img) {
-  var profileImg = document.getElementById('profile_img');
-  profileImg.src = img['picturUrl'];
+  $('#user_image_url').val(img['pictureUrl']);
 }

@@ -4,11 +4,7 @@
     %title MentorMatch
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    %script{src: 'https://platform.linkedin.com/in.js', type: 'text/javascript'}
-      :cdata
-        api_key: #{ENV['LINKEDIN_KEY']}
-        onLoad: onLinkedInLoad
-        authorize: false
+    = yield :javascripts
     = csrf_meta_tags
   %body
     = yield

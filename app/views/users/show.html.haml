@@ -7,12 +7,7 @@
   %header
   %article.userProfile
     %figure.profilePic
-    = image_tag @user.gravatar_url(:d => "http%3A%2F%2Fi.imgur.com%2FUFa4kwT.png"), id:'profile_img'
-    - if policy(@user).update?
-      -# = link_to update_image_path(@user), class:'linkedin', remote: true, method: :patch do
-      -#   %figcaption
-      -#     %small Don't see your picture? Use your LinkedIn profile picture!
-      %script{type: 'IN/Login'}
+    = image_tag @user.image_url ? @user.image_url : @user.gravatar_url(:d => "http%3A%2F%2Fi.imgur.com%2FUFa4kwT.png"), id:'profile_img'
 
     %section
       %label{for: "Name"} Name:
