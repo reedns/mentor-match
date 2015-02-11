@@ -124,9 +124,10 @@
     %section#s6
       %h2
         Would you like Mentor Match to use your LinkedIn profile picture?
-        Mentor Match automatically will try use Gravatar, but you can use
+        Mentor Match will automatically try use Gravatar, but you can use
         your LinkedIn profile picture instead by clicking the button below.
-      %script{type: 'IN/Login'}
+      .linkedin
+        %script{type: 'IN/Login'}
       .fieldWrap
         = f.hidden_field :image_url
         %button.submit
