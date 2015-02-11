@@ -82,8 +82,7 @@
         .fieldWrap
           = f.label :hopes_for_future, 'Hopes for my professional future'
           = f.text_area :hopes_for_future, placeholder: 'Example: I want to move to Silicon Valley and find work there.'
-          %button.submit
-            = f.submit 'Submit', class: "submit"
+
           %span.next.fa.fa-angle-double-right#next_5
         %nav.progBar
           %ul
@@ -114,7 +113,7 @@
         .fieldWrap
           = f.label :company
           = f.text_field :company, type: "text", placeholder: "ACME Corp."
-          %span.next.fa.fa-angle-double-right#next_4
+          %span.next.fa.fa-angle-double-right#next_5
         %nav.progBar
           %ul
             %li.progDot
@@ -122,7 +121,7 @@
             %li.progDot
             %li.progDot.active
             %li.progDot
-    %section#s5
+    %section#s6
       %h2
         Would you like Mentor Match to use your LinkedIn profile picture?
         Mentor Match automatically will try use Gravatar, but you can use

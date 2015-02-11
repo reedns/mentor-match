@@ -7,7 +7,7 @@
   %header
   %article.userProfile
     %figure.profilePic
-    = image_tag @user.image_url ? @user.image_url : @user.gravatar_url(:d => "http%3A%2F%2Fi.imgur.com%2FUFa4kwT.png"), id:'profile_img'
+    = image_tag image_view(@user)
 
     %section
       %label{for: "Name"} Name:
