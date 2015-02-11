@@ -93,14 +93,6 @@ class User < ActiveRecord::Base
   #   end
   # end
 
-  def self.get_picture(auth)
-    where(provider: auth.provider, uid: auth.uid).first do |user|
-      user.provider = auth.provider
-      user.uid = auth.uid
-      user.image_url = auth.info.image
-    end
-  end
-
   def password_required?
     super && provider.blank?
   end
