@@ -8,13 +8,13 @@
         - @user.errors.full_messages.each do |message|
           %li= message
   .field
-    = f.label :first_nam
+    = f.label :first_name
     = f.text_field :first_name
   .field
-    = f.label :last_nam
+    = f.label :last_name
     = f.text_field :last_name
   .field
-    = f.label :backgroun
+    = f.label :background
     = f.text_area :background
   .field
     = f.label :accomplishment
@@ -40,7 +40,7 @@
       = f.label :course
       = f.text_area :course
   .field
-    = f.label :admi
+    = f.label :admin
     = f.check_box :admin
   .actions
     = f.submit
