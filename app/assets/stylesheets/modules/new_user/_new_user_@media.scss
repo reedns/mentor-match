@@ -1,5 +1,7 @@
 @media screen and (max-width: 640px){
   .new{
+    display: block !important;
+
     header{
       padding: 5vh 0 0 0;
     }
@@ -10,6 +12,7 @@
     form#new_user{
       article.inputs{
         width: 100%;
+        display: block;
         padding: 0;
         background: transparent;
       }
@@ -28,15 +31,13 @@
           font-size: 1em;
         }
       }
-      select{
-        font-size: 1.5em;
-        background: transparent;
-        color: $delta;
-        padding-right: 3em;
-        width: 10em;
+      section{
+        display: block;
+        padding-left: 1em;
       }
       section.submitBtn{
-        margin-top: 3em;      }
+        margin-top: 3em;
+      }
     }
   }
 }

@@ -8,50 +8,39 @@
         - @user.errors.full_messages.each do |message|
           %li= message
   .field
-    = f.label :first_name
-    %br/
+    = f.label :first_nam
     = f.text_field :first_name
   .field
-    = f.label :last_name
-    %br/
+    = f.label :last_nam
     = f.text_field :last_name
   .field
-    = f.label :background
-    %br/
+    = f.label :backgroun
     = f.text_area :background
   .field
-    = f.label :accomplishments
-    %br/
+    = f.label :accomplishment
     = f.text_area :accomplishments
   .field
-    = f.label :professional_summary
-    %br/
+    = f.label :professional_summar
     = f.text_area :professional_summary
   - if current_user.role == "mentor"
     .field
       = f.label :company
-      %br/
       = f.text_area :company
     .field
       = f.label :position
-      %br/
       = f.text_area :position
     .field
       = f.label :available
-      %br/
       = f.check_box :available
   - else
     .field
       = f.label :graduating_class
-      %br/
       = f.text_area :graduating_class
     .field
       = f.label :course
-      %br/
       = f.text_area :course
   .field
-    = f.label :admin
-    %br/
+    = f.label :admi
     = f.check_box :admin
   .actions
     = f.submit
