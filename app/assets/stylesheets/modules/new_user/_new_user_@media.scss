@@ -1,7 +1,5 @@
 @media screen and (max-width: 640px){
   .new{
-    display: block !important;
-
     header{
       padding: 5vh 0 0 0;
     }
@@ -12,7 +10,6 @@
     form#new_user{
       article.inputs{
         width: 100%;
-        display: block;
         padding: 0;
         background: transparent;
       }
@@ -40,6 +37,8 @@
       }
     }
   }
+// New User Session
+
   input#user_remember_me{
     margin-left: 1em;
   }
