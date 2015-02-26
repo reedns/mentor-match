@@ -1,0 +1,16 @@
+@media screen and (max-width: 860px) {
+  .mainNav{
+    margin: 0;
+    &:hover{
+      margin: 0;
+    }
+  }
+
+  .mainAside{
+    margin: 0;
+    .paraWrap{
+      display: block;
+      font-size: .75em;
+    }
+  }
+}

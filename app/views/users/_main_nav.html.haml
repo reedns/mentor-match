@@ -8,13 +8,13 @@
   /     %p= link_to "Browse Mentors", users_path
   %section
     - if current_user.mentor?
-      %p= link_to "My Mentees", friendships_path
+      %p= link_to "My Mentees", friendships_path, class: 'mentees'
     - else
-      %p= link_to "My Mentors", friendships_path
+      %p= link_to "My Mentors", friendships_path, class: 'mentors'
   %section
-    %p= link_to "My Favorites", favorites_path(current_user.id)
+    %p= link_to "My Favorites", favorites_path(current_user.id), class: 'favorites'
   %section
-    %p= link_to "My Account", user_path(current_user)
+    %p= link_to "My Account", user_path(current_user), class: 'account'
   %section
     %p= link_to "About", intro_path
   / %section
