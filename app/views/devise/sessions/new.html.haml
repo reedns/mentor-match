@@ -5,11 +5,11 @@
     %article.inputsWrapper
       %section.userEmail
         = f.label :email
-        = f.email_field :email, autofocus: true, placeholder: 'Your email'
+        = f.email_field :email, autofocus: true, placeholder: 'email@example.com'
         .break
       %section.userPassword
         = f.label :password
-        = f.password_field :password, autocomplete: "off", placeholder: 'Your password'
+        = f.password_field :password, autocomplete: "off", placeholder: 'xxxxxxxx'
         .break
       %section.rememberMe
         - if devise_mapping.rememberable?
