@@ -3,3 +3,21 @@
     margin-left: 10vw;
   }
 }
+
+@media screen and(max-width: 300px){
+  article.quickNav{
+    margin-bottom: 0;
+    #home, #settings, .verticalRule{
+      display: none;
+    }
+    img{
+      height: 2rem;
+      width: 2rem;
+    }
+    a.signout{
+      height: 2rem;
+      width: 2rem;
+      text-align: center;
+    }
+  }
+}

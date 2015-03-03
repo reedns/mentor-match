@@ -240,27 +240,27 @@
 /*================================================
           EM-BASED SMARTPHONE BREAKPOINT
 =================================================*/
-
-@media handheld, screen and (max-width: 30em){
-  .splash{
-    article{
-      &.copy{
-        padding: 15vh 0;
-      }
-    }
-    .ulWrapper, ul.mentors{
-      h3{
-        display: none;
-      }
-    }
-    section.button-wrap, section.existingUser{
-      button{
-        height: 10vh;
-        width: 50vw;
-        a{
-          font-size: 2vh;
-        }
-      }
-    }
-  }
-}
+// 
+// @media handheld, screen and (max-width: 30em){
+//   .splash{
+//     article{
+//       &.copy{
+//         padding: 15vh 0;
+//       }
+//     }
+//     .ulWrapper, ul.mentors{
+//       h3{
+//         display: none;
+//       }
+//     }
+//     section.button-wrap, section.existingUser{
+//       button{
+//         height: 10vh;
+//         width: 50vw;
+//         a{
+//           font-size: 2vh;
+//         }
+//       }
+//     }
+//   }
+// }

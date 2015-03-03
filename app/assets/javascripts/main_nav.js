@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(window).on('resize load', function() {
+  $(window).on('resize page:load', function() {
     if($(window).width() <= 1100) {
       changeText();
     }

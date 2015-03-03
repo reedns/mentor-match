@@ -1,60 +1,99 @@
-@media screen and (max-width: 1024px) {
+@media handheld, screen and (max-width: 1024px) {
+  //right sidebar
   .mainAside{
     p.paraWrap{
-      font-size: .9em;
+      font-size: .8em;
     }
   }
 }
 
 
-@media screen and (max-width: 860px) {
+@media handheld, screen and (max-width: 860px) {
+  //left sidebar
   .mainNav{
     margin: 0;
     &:hover{
       margin: 0;
     }
   }
-
+  //right sidebar
   .mainAside{
-    width: 30%;
+    width: 30vw;
     height: 50%;
-    margin: 0;
+    margin: 0 0 1vh 0;
     section{
       padding: 1vh 0;
-    }
-    p.paraWrap{
-      font-size: .6em;
-    }
-    .button{
-      font-size: .6em;
     }
   }
 }
 
-@media screen and (max-width: 480px) {
+@media handheld, screen and (max-width: 480px) {
+  //main content area
+  .mainWrapper{
+    margin-top: 1em;
+  }
+  //left sidebar
+  div.mainNav{
+    width: 100vw;
+  }
+  //right sidebar
   .mainAside{
-    width: 50%;
-    .button{
-      width: 8em;
+    width: 100vw;
+    height: 40vh;
+    a.button{
+      display: inline;
+      font-size: 1.2vh;
+      padding: .8vh 2.5vw;
     }
   }
-
+  //user cards and search bar
   .browse-users{
     article.userCard{
       margin: 1vh auto;
       height: 12rem;
       width: 7rem;
     }
-
     #search{
-      margin: 1vh auto;
-      position: flex;
+      margin: 2vh auto;
     }
   }
 }
 
-@media screen and (max-width: 300px) {
+@media handheld, screen and (max-width: 300px) {
+  //right sidebar
   .mainAside{
-    width: 60%;
+    p.paraWrap{
+      font-size: .6em;
+    }
+    a.button{
+      font-size: 1.6vh;
+      padding: 1.5vh 2vw;
+    }
+  }
+  //left sidebar
+  div.mainNav{
+    section{
+      max-height: 20vh;
+    }
+    a{
+      font-size: 3vh;
+      text-align: left;
+    }
+  }
+  //logo
+  .browse-users{
+    div.logo{
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+  //search buttons
+  .users{
+    input.search-button{
+      margin: 1vh 1vw;
+    }
+    a.search-button{
+      margin: 1vh 1vw;
+    }
   }
 }
