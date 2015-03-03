@@ -1,3 +1,12 @@
+@media screen and (max-width: 1024px) {
+  .mainAside{
+    p.paraWrap{
+      font-size: .9em;
+    }
+  }
+}
+
+
 @media screen and (max-width: 860px) {
   .mainNav{
     margin: 0;
@@ -7,10 +16,45 @@
   }
 
   .mainAside{
+    width: 30%;
+    height: 50%;
     margin: 0;
-    .paraWrap{
-      display: block;
-      font-size: .75em;
+    section{
+      padding: 1vh 0;
     }
+    p.paraWrap{
+      font-size: .6em;
+    }
+    .button{
+      font-size: .6em;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainAside{
+    width: 50%;
+    .button{
+      width: 8em;
+    }
+  }
+
+  .browse-users{
+    article.userCard{
+      margin: 1vh auto;
+      height: 12rem;
+      width: 7rem;
+    }
+
+    #search{
+      margin: 1vh auto;
+      position: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .mainAside{
+    width: 60%;
   }
 }
