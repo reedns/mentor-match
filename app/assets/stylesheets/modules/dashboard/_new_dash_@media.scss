@@ -2,7 +2,7 @@
   //right sidebar
   .mainAside{
     p.paraWrap{
-      font-size: .8em;
+      font-size: 1em;
     }
   }
 }
@@ -30,20 +30,32 @@
 @media handheld, screen and (max-width: 480px) {
   //main content area
   .mainWrapper{
-    margin-top: 1em;
+    margin-top: 3vh;
   }
   //left sidebar
   div.mainNav{
     width: 100vw;
+    height: 40vh;
+    margin-bottom: 6vh;
+    section{
+      height: 8vh;
+      a{
+        font-size: 3vh;
+        text-align: left;
+      }
+    }
   }
   //right sidebar
   .mainAside{
     width: 100vw;
-    height: 40vh;
+    height: 50vh;
     a.button{
       display: inline;
-      font-size: 1.2vh;
+      font-size: .6em;
       padding: .8vh 2.5vw;
+    }
+    p.paraWrap{
+      margin-bottom: 2vh;
     }
   }
   //user cards and search bar
@@ -53,8 +65,15 @@
       height: 12rem;
       width: 7rem;
     }
-    #search{
+    input#search{
       margin: 2vh auto;
+    }
+  }
+
+  .users{
+    input.search-button, a.search-button{
+      font-size: .6em;
+      margin: 1vh 1vw;
     }
   }
 }
@@ -66,8 +85,8 @@
       font-size: .6em;
     }
     a.button{
-      font-size: 1.6vh;
-      padding: 1.5vh 2vw;
+      font-size: 2vh;
+      padding: 1.2vh 2.5vw;
     }
   }
   //left sidebar
@@ -75,25 +94,12 @@
     section{
       max-height: 20vh;
     }
-    a{
-      font-size: 3vh;
-      text-align: left;
-    }
   }
   //logo
   .browse-users{
     div.logo{
       height: 2rem;
       width: 2rem;
-    }
-  }
-  //search buttons
-  .users{
-    input.search-button{
-      margin: 1vh 1vw;
-    }
-    a.search-button{
-      margin: 1vh 1vw;
     }
   }
 }
