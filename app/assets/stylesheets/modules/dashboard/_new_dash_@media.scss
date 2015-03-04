@@ -9,6 +9,9 @@
 
 
 @media handheld, screen and (max-width: 860px) {
+  html, body{
+    overflow-x: hidden;
+  }
   //left sidebar
   .mainNav{
     margin: 0;
@@ -23,6 +26,9 @@
     margin: 0 0 1vh 0;
     section{
       padding: 1vh 0;
+      figure{
+        width: 50%;
+      }
     }
   }
 }
