@@ -36,13 +36,15 @@ form#new_user{
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  article{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 2em;
-    width: 80%;
-    background: transparent;
+  @media screen and (min-width: 641px){
+    article{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 2em;
+      width: 80%;
+      background: transparent;
+    }
   }
   #error_explanation{
     color: $delta;

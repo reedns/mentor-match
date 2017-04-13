@@ -2,7 +2,7 @@
                   TABLET STYLES
 =================================================*/
 
-@media (max-width: 800px) {
+@media handheld, screen and (max-width: 800px) {
 .splash{
   h3{
     font-size: 2vh;
@@ -25,7 +25,7 @@
                 SMARTPHONE STYLES
 =================================================*/
 
-@media (max-width: 640px){
+@media handheld, screen and (max-width: 480px){
   .splash{
     background: $alpha;
     p.whoFor{
@@ -109,8 +109,8 @@
       position: relative;
       &.copy{
         top: 0;
-        padding: 15vh 0;
-        height: 65vh;
+        padding: 10vh 0;
+        height: 50vh;
         margin:  0;
         background-image: url(image-path("desk.jpg"));
         background-size: cover;
@@ -240,27 +240,27 @@
 /*================================================
           EM-BASED SMARTPHONE BREAKPOINT
 =================================================*/
-
-@media (max-width: 30em){
-  .splash{
-    article{
-      &.copy{
-        padding: 15vh 0;
-      }
-    }
-    .ulWrapper, ul.mentors{
-      h3{
-        display: none;
-      }
-    }
-    section.button-wrap, section.existingUser{
-      button{
-        height: 10vh;
-        width: 50vw;
-        a{
-          font-size: 2vh;
-        }
-      }
-    }
-  }
-}
+// 
+// @media handheld, screen and (max-width: 30em){
+//   .splash{
+//     article{
+//       &.copy{
+//         padding: 15vh 0;
+//       }
+//     }
+//     .ulWrapper, ul.mentors{
+//       h3{
+//         display: none;
+//       }
+//     }
+//     section.button-wrap, section.existingUser{
+//       button{
+//         height: 10vh;
+//         width: 50vw;
+//         a{
+//           font-size: 2vh;
+//         }
+//       }
+//     }
+//   }
+// }

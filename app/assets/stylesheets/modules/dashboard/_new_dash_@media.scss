@@ -1,0 +1,111 @@
+@media handheld, screen and (max-width: 1024px) {
+  //right sidebar
+  .mainAside{
+    p.paraWrap{
+      font-size: 1em;
+    }
+  }
+}
+
+
+@media handheld, screen and (max-width: 860px) {
+  html, body{
+    overflow-x: hidden;
+  }
+  //left sidebar
+  .mainNav{
+    margin: 0;
+    &:hover{
+      margin: 0;
+    }
+  }
+  //right sidebar
+  .mainAside{
+    width: 30vw;
+    height: 50%;
+    margin: 0 0 1vh 0;
+    section{
+      padding: 1vh 0;
+      figure{
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media handheld, screen and (max-width: 480px) {
+  //main content area
+  .mainWrapper{
+    margin-top: 3vh;
+  }
+  //left sidebar
+  div.mainNav{
+    width: 100vw;
+    height: 40vh;
+    margin-bottom: 6vh;
+    section{
+      height: 8vh;
+      a{
+        font-size: 3vh;
+        text-align: left;
+      }
+    }
+  }
+  //right sidebar
+  .mainAside{
+    width: 100vw;
+    height: 50vh;
+    a.button{
+      display: inline;
+      font-size: .6em;
+      padding: .8vh 2.5vw;
+    }
+    p.paraWrap{
+      margin-bottom: 2vh;
+    }
+  }
+  //user cards and search bar
+  .browse-users{
+    article.userCard{
+      margin: 1vh auto;
+      height: 12rem;
+      width: 7rem;
+    }
+    input#search{
+      margin: 2vh auto;
+    }
+  }
+
+  .users{
+    input.search-button, a.search-button{
+      font-size: .6em;
+      margin: 1vh 1vw;
+    }
+  }
+}
+
+@media handheld, screen and (max-width: 300px) {
+  //right sidebar
+  .mainAside{
+    p.paraWrap{
+      font-size: .6em;
+    }
+    a.button{
+      font-size: 2vh;
+      padding: 1.2vh 2.5vw;
+    }
+  }
+  //left sidebar
+  div.mainNav{
+    section{
+      max-height: 20vh;
+    }
+  }
+  //logo
+  .browse-users{
+    div.logo{
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
